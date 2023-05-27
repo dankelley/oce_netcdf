@@ -1,0 +1,12 @@
+temperature:
+    name: "TEMP"
+    units: "degree_Celcius"
+    longname: "Sea temperature in-situ ITS-90 scale"
+salinity:
+    name: "PSAL"
+    units: "psu"
+    longname: "Practical Salinity"
+pressure:
+    name: "PRES"
+    units: "decibar"
+    longname: "Sea water pressure, equals 0 at sea-level"

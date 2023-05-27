@@ -26,21 +26,9 @@ naming convention copies argo.
 # TO DO
 
 1. Make it read a conversion file, perhaps in YAML format, e.g. as follows for
-   argo. (Yes, I am aware that "psu" is not a unit, but it is in argo files.)
-   PS. I see that yaml::yaml.load() can read the string below.
+   argo to read (some of) the argo definitions.
 
-    temperature:
-        name: "TEMP"
-        units: "degree_Celcius"
-        longname: "Sea temperature in-situ ITS-90 scale"
-    salinity:
-        name: "PSAL"
-        units: "psu"
-        longname: "Practical Salinity"
-    pressure:
-        name: "PRES"
-        units: "decibar"
-        longname: "Sea water pressure, equals 0 at sea-level"
+    yaml::yaml.load_file("argo.yml")
 
 2. Make it save all items in the @data slot.
 
