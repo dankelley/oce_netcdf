@@ -1,0 +1,20 @@
+netcdf 02 { // example netCDF specification in CDL
+
+dimensions:
+N_LEVELS = 3;
+
+variables:
+  double TEMP(N_LEVELS);
+  TEMP:long_name = "Sea temperature in-situ ITS-90 scale";
+  TEMP:standard_name = "sea_water_temperature";
+  TEMP:_FillValue = 99999.f ;
+  TEMP:units = "degree_Celcius";
+  TEMP:conventions = "degrees_Celcius";
+  double PSAL(N_LEVELS);
+  double PRES(N_LEVELS);
+
+data:
+TEMP=14.22109, 14.22649, 14.22509, 14.22219, 14.22669, 14.23318;
+PSAL=29.9210, 29.9205, 29.9206, 29.9219, 29.9206, 29.9164;
+PRES=1.480, 1.671, 2.052, 2.243, 2.624, 2.672;
+}
