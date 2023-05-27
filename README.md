@@ -27,6 +27,7 @@ naming convention copies argo.
 
 1. Make it read a conversion file, perhaps in YAML format, e.g. as follows for
    argo. (Yes, I am aware that "psu" is not a unit, but it is in argo files.)
+   PS. I see that yaml::yaml.load() can read the string below.
 
     temperature:
         name: "TEMP"
