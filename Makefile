@@ -1,8 +1,12 @@
-SOURCES=$(wildcard *.cdl)
-OBJECTS=$(SOURCES:.cdl=.nc)
-all: $(OBJECTS)
+RSOURCES=$(wildcard *.R)
+ROBJECTS=$(RSOURCES:.R=.out)
+CDLSOURCES=$(wildcard *.cdl)
+CDLOBJECTS=$(CDLSOURCES:.cdl=.nc)
+all: $(ROBJECTS) $(CDLOBJECTS)
 %.nc: %.cdl
 	ncgen -o $@ < $<
+%.out: %.R
+	Rscript $<
 clean:
-	-rm *~ *swp *.nc
+	-rm *~ *swp *.nc *.out
 
